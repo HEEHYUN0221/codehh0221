@@ -1,13 +1,9 @@
 class Solution {
     public String solution(int n) {
-        String answer = "수";
-        for(int i =0;i<n-1;i++){ 
-             if (answer.charAt(answer.length() - 1) == '수') {
-                answer += "박";
-            } else {
-                answer += "수";
-            }
+        StringBuilder answer = new StringBuilder(n);
+        for (int i = 0; i < n; i++) {
+            answer.append(i % 2 == 0 ? "수" : "박");
         }
-        return answer;
+        return answer.toString();
     }
 }
