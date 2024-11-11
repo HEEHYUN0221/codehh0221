@@ -1,11 +1,11 @@
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
+
 class Solution {
     public boolean solution(String s) {
-        if(s.length()!=4&&s.length()!=6){return false;}
-        byte[] bytes = s.getBytes(StandardCharsets.US_ASCII);
-        for(int i =0;i<bytes.length;i++){
-           if((bytes[i]>=65&&bytes[i]<=90)||(bytes[i]>=97&&bytes[i]<=122)){
+        int length = s.length();
+        if(length!=4&&length!=6){return false;}
+        char[] c = s.toCharArray();
+        for(int i =0;i<c.length;i++){
+           if((c[i]>='a'&&c[i]<='z')||(c[i]>='A'&&c[i]<='Z')){
                return false;
            } 
         }
