@@ -26,10 +26,6 @@ class Solution {
                 break;
             }
         }
-        
-        for(String a : list){
-            System.out.println(a);
-        }
       
         return list.size();
     }
